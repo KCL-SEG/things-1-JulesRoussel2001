@@ -2,9 +2,15 @@ from django.db import models
 
 class Thing(models.Model):
     name = models.CharField(
-    max_length=30,
-    unique=True,
-    blank=False
+        max_length=30,
+        unique=True,
+        blank=False
     )
-    description = models.TextField()
-    quantity = models.IntegerField()
+    description = models.TextField(
+        max_length=120,
+        unique=True,
+        blank=True
+    )
+    quantity = models.IntegerField(
+
+    )
